@@ -54,5 +54,5 @@ To fix the corrupted file, run the script again with `--truncate` as last argume
 python3 ra_wal/ra_wal_tinker.py workspace/rabbit@rs_rabbitmq/quorum/rabbit@rs_rabbitmq/00037248.wal --truncate
 ```
 
-The copy back the fixed file into `/home/docker/data/mnesia/rabbit@rs_rabbitmq/quorum/rabbit@rs_rabbitmq/00037248.wal`
+Then copy back the fixed file into `/home/docker/data/mnesia/rabbit@rs_rabbitmq/quorum/rabbit@rs_rabbitmq/00037248.wal`
 
