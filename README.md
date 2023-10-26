@@ -48,10 +48,16 @@ checksum is zero, meet file tail[167690379], stop.
 scan wal file, find 450892 normal entries, 1 corrupted entries. <<<< Here
 ```
 
-To fix the corrupted file, run the script again with `--truncate` as last argument
+To fix the corrupted file, run the script again with `--truncate` as last option.
 
 ``` sh
 python3 ra_wal/ra_wal_tinker.py workspace/rabbit@rs_rabbitmq/quorum/rabbit@rs_rabbitmq/00037248.wal --truncate
+```
+
+Verify the state of the fixed file by running again the analysis on it without the `--truncate` option.
+
+``` sh
+python3 ra_wal/ra_wal_tinker.py workspace/rabbit@rs_rabbitmq/quorum/rabbit@rs_rabbitmq/00037248.wal
 ```
 
 Then copy back the fixed file into `/home/docker/data/mnesia/rabbit@rs_rabbitmq/quorum/rabbit@rs_rabbitmq/00037248.wal`
